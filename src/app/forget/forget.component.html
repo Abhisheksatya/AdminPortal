@@ -1,0 +1,14 @@
+<div class="container">
+    <form (ngSubmit)="onSubmit()" *ngIf="!send">
+            <div class="form-group">
+              <label for="mail">Email address</label>
+              <input type="email" class="form-control" id="mail" aria-describedby="emailHelp" [(ngModel)]="forget.mail"
+              ngControl="mail" placeholder="Username" name="mail" required>
+            </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form><br><br>
+  <div *ngIf="send">
+    <h3>Temporary Password sended on you mail</h3>
+    <h2>{{currentUserName}}</h2>
+  </div>
+</div>

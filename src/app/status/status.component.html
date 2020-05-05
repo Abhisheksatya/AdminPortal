@@ -1,0 +1,52 @@
+<hr><blockquote class="blockquote text-center">
+        <p class="mb-0">Travelling Details.</p><hr>
+    </blockquote>
+            <!-- <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search Here" [(ngModel)]="term" ngControl="term" #term="ng-Model">
+            </div> -->
+    <div class="container" >
+        <div class="table-responsive" style="margin-top: 30px;">
+            <table id="ticketlisttable" class="table bordered highlight table-hover table-dark">
+                <thead>
+                    <tr>
+                        <th><a style="cursor: pointer" (click)="onNum(tick)">Ticket Number </a></th>
+                        <th><a style="cursor: pointer" (click)="onPer(tick)">Priority</a></th>
+                        <th><a style="cursor: pointer" (click)="onStatus(tick)">Status</a></th>
+                        <th><a style="cursor: pointer" (click)="onApprover(tick)">Approver</a></th>
+                        <th><a style="cursor: pointer" (click)="onReqtype(tick)">Request Type</a></th>
+                        <th><a style="cursor: pointer" (click)="onProject(tick)">Project</a></th>
+                        <th><a style="cursor: pointer" (click)="onmail(tick)">Mail</a></th>
+                        <th><a style="cursor: pointer" (click)="onFromloc(tick)">FromLocation</a></th>
+                        <th><a style="cursor: pointer" (click)="onCity(tick)">TravelCity</a></th>
+                        <th><a style="cursor: pointer" (click)="onEnd(tick)">EndDate</a></th>
+                        <th><a style="cursor: pointer" (click)="onStart(tick)">StartDate</a></th>
+                        <th><a style="cursor: pointer" (click)="onNum(tick)">Passport</a></th>
+                        <th>BoundAmount</th>
+                        <th>Details</th>
+                        <th>Duration</th>
+                        <th>Update</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor = "let status of tick  ">
+                        <td><a style="cursor: pointer">{{status.ticketNumber}}</a></td>
+                        <td><a style="cursor: pointer">{{status.priority}}</a></td>
+                        <td><a style="cursor: pointer">{{status.status}}</a></td>
+                        <td><a style="cursor: pointer">{{status.approver}}</a></td>
+                        <td><a style="cursor: pointer">{{status.requestType}}</a></td>
+                        <td><a style="cursor: pointer">{{status.project}}</a></td>
+                        <td><a style="cursor: pointer">{{status.mail}}</a></td> 
+                        <td><a style="cursor: pointer">{{status.fromLocation}}</a></td>
+                        <td><a style="cursor: pointer">{{status.travelCity}}</a></td>
+                        <td><a style="cursor: pointer">{{status.startDate}}</a></td>
+                        <td><a style="cursor: pointer">{{status.endDate}}</a></td>
+                        <td><a style="cursor: pointer">{{status.passport}}</a></td>
+                        <td><a style="cursor: pointer">{{status.boundAmount}}</a></td>
+                        <td><a style="cursor: pointer">{{status.details}}</a></td>
+                        <td><a style="cursor: pointer">{{status.duration}}</a></td>
+                        <td><button style="cursor:pointer" (click)="onUpdate(status)">Update</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> 
+    </div>

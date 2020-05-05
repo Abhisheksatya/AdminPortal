@@ -1,0 +1,83 @@
+<div>
+  <hr><h3>Ticket</h3><hr>
+      <table class="table table-responsive-sm table-hover table-borderless table-dark">
+          <tbody>
+            <tr>
+              <th scope="row">Ticket Number :</th>
+              <td>{{statuss.ticketNumber}}</td>
+            </tr>
+          </tbody>
+          <tbody>
+              <tr>
+                <th scope="row">Request Type :</th>
+                <td>{{statuss.requestType}}</td>
+              </tr>
+              <tr>
+                <th scope="row">Approver :</th>
+                <td>{{statuss.approver}}</td>
+              </tr>
+              <tr>
+                <th scope="row">Priority :</th>
+                <td colspan="2">{{statuss.priority}}</td>
+              </tr>
+              <tr>
+                <th scope="row">Project :</th>
+                <td>{{statuss.project}}</td>
+              </tr>
+              <tr>
+                <th scope="row">Start Date :</th>
+                <td>{{statuss.startDate}}</td>
+              </tr>
+              <tr>
+                <th scope="row">End Date :</th>
+                <td colspan="2">{{statuss.endDate}}</td>
+              </tr>
+              <tr>
+                <th scope="row">From Location :</th>
+                <td>{{statuss.fromLocation}}</td>
+              </tr>
+              <tr>
+                <th scope="row">TravelCity :</th>
+                <td>{{statuss.travelCity}}</td>
+              </tr>
+              <tr>
+                <th scope="row">Passport :</th>
+                <td colspan="2">{{statuss.passport}}</td>
+              </tr>
+              <tr>
+                <th scope="row">Bound Amount :</th>
+                <td colspan="2">{{statuss.boundAmount}}</td>
+              </tr>
+              <tr>
+                <th scope="row">Duration :</th>
+                <td colspan="2">{{statuss.duration}}</td>
+              </tr>
+              <tr>
+                <th scope="row">Details :</th>
+                <td colspan="2">{{statuss.details}}</td>
+              </tr>
+              <tr>
+                <th scope="row">Status :</th>
+                <td colspan="2">
+                  <div class="form-group col-md-6">
+                    <select id="status" name="status" class="form-control" [(ngModel)]="statuss.status" ngControl="status">
+                        <option   selected>{{statuss.status}}</option>
+                        <option value="In Process">In Process</option>
+                        <option value="Done">Done</option>
+                    </select>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                  <td>
+                    <button type="button" class="btn btn-outline-primary" (click)="onClick()">Print</button>
+                  </td>
+                  <td>
+                    <button type="button" (click)="onEdit(statuss)" class="btn btn-outline-danger">Save</button>
+                    <button type="button" (click)="onReview(statuss)" class="btn btn-outline-success">admin review</button>
+                    <button type="button" routerLink="/home-app" routerLinkActive="active" class="btn btn-outline-success">Return to Home Page</button>
+                  </td>
+              </tr>
+          </tbody>
+      </table>
+</div>
